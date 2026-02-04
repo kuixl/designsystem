@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Статья о современном веб-дизайне</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 16px;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 24px;
+    }
+
+    article {
+      background: #f9f9f9;
+      padding: 16px;
+      border-radius: 8px;
+      animation: fade-in-up 0.6s ease-out;
+    }
+
+    article h1 {
+      font-size: 28px;
+      margin-top: 0;
+    }
+
+    article h2 {
+      font-size: 22px;
+      margin-top: 24px;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .intro-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .intro-images img {
+      width: 100%;
+      max-width: 260px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .intro-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .grid-section {
+      margin-top: 24px;
+    }
+
+    .grid-section h2 {
+      margin-bottom: 12px;
+    }
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .grid-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .grid-card h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .grid-card p {
+      font-size: 14px;
+    }
+
+    .grid-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    aside {
+      background: #f0f0f0;
+      padding: 16px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      animation: fade-in-up 0.6s ease-out;
+    }
+
+    aside h2 {
+      font-size: 20px;
+      margin-top: 0;
+    }
+
+    .tip {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .tip:hover {
+      background-color: #ffeeba;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 16px;
+      margin-top: 24px;
+    }
+
+    footer p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+    @keyframes fade-in-up {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        text-align: center;
+      }
+
+      article h1 {
+        font-size: 24px;
+      }
+
+      .intro-images {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#intro">Введение</a>
+    <a href="#layout">Сетки</a>
+    <a href="#adaptive">Адаптив</a>
+    <a href="#animations">Анимации</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <section id="intro" class="intro">
+      <h1>Современный веб-дизайн и семантическая верстка</h1>
+      <p>Современный веб-дизайн опирается на семантическую HTML-разметку, адаптивные сетки и аккуратные визуальные эффекты. Семантика помогает браузерам и пользователям лучше понимать структуру страницы, а также делает сайты доступнее для людей с ограниченными возможностями.</p>
+      <p>Использование правильных тегов, таких как header, nav, main, section и footer, позволяет описать смысл блоков, а не только их внешний вид. Это важно для поисковых систем, экранных читалок и дальнейшей поддержки проекта.</p>
+      <div class="intro-images">
+        <img src="https://mchost.ru/files/img/structure.png" alt="Пример структуры страницы">
+        <img src="https://allforjoomla.ru/images/semantic-layout.jpg" alt="Семантическая разметка">
+        <img src="https://optim.tildacdn.com/tild3434-3038-4234-b632-303535343361/-/resize/744x/-/format/webp/2023-10-23_22-46-26_.png.webp" alt="Работа с сеткой">
+        <img src="https://media.lpgenerator.ru/uploads/2023/02/15/3.png" alt="Адаптивный интерфейс">
+      </div>
+    </section>
+
+    <section id="layout" class="grid-section">
+      <h2>CSS Grid и Flexbox в макете</h2>
+      <p>CSS Grid и Flexbox позволяют создавать гибкие и понятные макеты. Grid удобно использовать для общей структуры страницы и расположения крупных блоков, а Flexbox — для выравнивания элементов внутри этих блоков, например, в меню или карточках.</p>
+      <div class="grid-layout">
+        <div class="grid-card">
+          <h3>Grid для каркаса</h3>
+          <p>Grid задаёт строки и колонки, в которых размещаются основные части страницы: шапка, контент, боковая панель и подвал. Это помогает поддерживать аккуратную структуру на разных экранах.</p>
+        </div>
+        <div class="grid-card">
+          <h3>Flexbox для элементов</h3>
+          <p>Flexbox хорошо подходит для выравнивания пунктов меню, кнопок и небольших блоков. Он упрощает управление отступами и распределением пространства между элементами.</p>
+        </div>
+        <div class="grid-card">
+          <h3>Комбинация подходов</h3>
+          <p>Часто Grid используется для общего макета, а Flexbox — внутри отдельных компонентов. Такой подход делает код понятным и удобным для изменения.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="adaptive">
+      <h2>Адаптивный дизайн</h2>
+      <p>Адаптивный дизайн позволяет странице корректно отображаться на телефонах, планшетах и компьютерах. Для этого используются относительные единицы, гибкие сетки и медиазапросы, которые изменяют расположение блоков в зависимости от ширины экрана.</p>
+      <p>Например, на широком экране можно показывать несколько колонок, а на узком — располагать блоки друг под другом. Это улучшает удобство чтения и взаимодействия с сайтом.</p>
+    </section>
+
+    <section id="animations">
+      <h2>CSS анимации и переходы</h2>
+      <p>Анимации и плавные переходы помогают сделать интерфейс живым и отзывчивым. Небольшие эффекты при наведении на карточки или появлении контента направляют внимание пользователя и делают взаимодействие с сайтом приятнее.</p>
+      <p>Важно использовать анимации аккуратно, чтобы они не отвлекали от основного содержания. Лёгкое увеличение карточки, плавное изменение цвета или мягкое появление блока — хорошие примеры уместных эффектов.</p>
+    </section>
+  </article>
+
+  <aside>
+    <h2>Краткие советы</h2>
+    <div class="tip">
+      Используйте семантические теги, чтобы структура страницы была понятной и логичной.
+    </div>
+    <div class="tip">
+      Стройте макет на основе Grid, а для внутренних элементов применяйте Flexbox.
+    </div>
+    <div class="tip">
+      Проверяйте страницу на разных устройствах и используйте медиазапросы для адаптива.
+    </div>
+    <div class="tip">
+      Добавляйте анимации и переходы только там, где они помогают пользователю.
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p>Статья о современном веб-дизайне</p>
+  <p>Автор: Константин Даровский</p>
+</footer>
+
+</body>
+</html>
